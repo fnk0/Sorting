@@ -9,21 +9,30 @@ package main;
  */
 public class Sorting {
 	
+	/**
+	 * 
+	 */
 	public Sorting() {
 		
 	}
 	
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {	
-		
 		MergeSort mergeThread = new MergeSort(1);
 		mergeThread.start();
-		
 		BubbleSort bubbleThread = new BubbleSort(1);
 		bubbleThread.start();
 	}	
 	
+	/**
+	 * 
+	 * @param sortedArray
+	 * @return
+	 */
 	public static boolean checkSort(double[] sortedArray) {
-		
 		for(int i = 0; i < sortedArray.length; i++) {
 			try {
 				if(sortedArray[i + 1] < sortedArray[i]) {
@@ -31,8 +40,6 @@ public class Sorting {
 				}
 			} catch(ArrayIndexOutOfBoundsException ex) {}
 		}
-		
 		return true;
-		
 	}
 }

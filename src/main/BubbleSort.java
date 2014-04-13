@@ -14,21 +14,37 @@ public class BubbleSort extends Thread {
 	private int sortSize;
 	private Timer bubbleTimer;
 	
+	/**
+	 * 
+	 */
 	public BubbleSort() {
 		this.sortSize = 1;
 		bubbleTimer = new Timer();
 	}
 	
+	/**
+	 * 
+	 * @param sortSize
+	 */
 	public BubbleSort(int sortSize) {
 		this.sortSize = sortSize;
 		bubbleTimer = new Timer();
 	}
 	
+	/**
+	 * 
+	 * @param toSortArray
+	 */
 	public void sortArray(double[] toSortArray) {
 		bubbleTimer.start();
 		getSortedArray(toSortArray);
 	}
 	
+	/**
+	 * 
+	 * @param toSortArray
+	 * @return
+	 */
 	@SuppressWarnings("deprecation")
 	public double[] getSortedArray(double[] toSortArray) {	
 		
@@ -64,6 +80,11 @@ public class BubbleSort extends Thread {
 		return null;
 	}
 	
+	/**
+	 * 
+	 * @param size
+	 * @return
+	 */
 	private double[] generateArray(int size) {
 		int arraySize = size * 10;
 		double[] doubleArray = new double[arraySize];
@@ -72,7 +93,10 @@ public class BubbleSort extends Thread {
 		}
 		return doubleArray;
 	}
-
+	
+	/**
+	 * 
+	 */
 	@Override
 	public void run() {
 		Timer timer = new Timer();
